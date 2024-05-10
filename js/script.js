@@ -17,4 +17,16 @@ document.getElementById("imcForm").addEventListener("submit",function(event){
     const IMC = peso / (altura * altura);
     resultadoIMC.textContent = IMC.toFixed(2); //Limita el resultado a 2 decimales
 
+    if (IMC < 18.5){
+        console.log("Bajo peso");
+    }
+    else if(IMC > 18.5 && IMC < 24.9){
+        console.log("Normal");
+    }
+    else if(IMC > 25 && IMC < 29.9){
+        console.log("Sobre peso");
+    }
+    else{
+        console.log("Obesidad");
+    }
 });
